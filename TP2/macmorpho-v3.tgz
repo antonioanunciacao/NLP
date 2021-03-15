@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <head>
+        <title>Mac-Morpho</title>
+    </head>
+    
+    <body>
+        <div id="main">
+        <h1 class="title">Mac-Morpho</h1>
+        
+            <p>
+                Mac-Morpho is a corpus of Brazilian Portuguese texts annotated with part-of-speech tags. Its first version was released in 2003 [<a href="#ref1">1</a>], and since then, two revisions have been made in order to improve the quality of the resource [<a href="#ref2">2</a>, <a href="#ref3">3</a>].
+            </p>
+            
+            <p>
+                The corpus is available for download split into train, development and test sections. These are 76%, 4% and 20% of the corpus total, respectively (the reason for the unusual numbers is that the corpus was first split into 80%/20% train/test, and then 5% of the train section was set aside for development). This split was used in [<a href="#ref3">3</a>], and new POS tagging research with Mac-Morpho is encouraged to follow it in order to make consistent comparisons possible.
+            </p>
+                
+            <ul class="downloads">
+                <li class="download-item"><a href="macmorpho-v3.tgz">Download Mac-Morpho</a></li>
+                <li class="download-item"><a href="macmorpho-manual.pdf">Download annotation manual</a> (in Portuguese) <br/> <strong>NOTE:</strong> the manual was written for its original annotation, i.e., before the changes in the tagset were introduced. Therefore, it does not reflect the current state of the corpus.</li>
+            </ul>
+
+	    <p><strong>Disclaimer:</strong> Mac-Morpho versions 1, 2 and 3 are licensed under a Creative Commons Attribution 4.0 International License. This means you can distribute, remix, tweak, and build upon Mac-Morpho versions, even commercially, as long as you give us the credit for the original creation. <a href="macmorpho-license.pdf">Mac-Morpho License</a>.</p>
+            
+            <div id="revisions">
+                <h2>Revisions</h2>
+                
+                <p>
+                    The first main revision is described in [<a href="#ref2">2</a>], and consisted of two main parts: cleaning noise in the data and changing the tagset to include preposition contractions. The noise present in the original corpus was mainly in the form of sentences which were missing words and repeated sentences. Using a set of heuristics to detect impossible POS tag sequences, sentences with missing words were discarded from the corpus. Repeated sentences were also checked and removed. The use of preposition contractions avoids the need of a preprocessing step for splitting such tokens. 
+                </p>
+                
+                <p>
+                    After the first revision, a second one has taken place, described in [<a href="#ref3">3</a>]. It included corrections of problematic sentences (which had tags assigned to empty strings) and a new change to the tagset. This new change aimed at removing tags that needed knowledge above the morpho-syntactic level in order to be correctly detected: auxiliary verbs (merged with main verbs), relative connective pronouns (merged with connective pronouns) and relative connective adverbs (merged with connective adverbs).
+                </p>
+            </div> <!-- revisions -->
+            
+            <div id="previous-versions">
+                <h2>Previous Versions</h2>
+                
+                <p>The two previous versions of Mac-Morpho can be found below. They are also split into train, development and test, in the same way used in [<a href="#ref3">3</a>].</p>
+                
+                <ul class="downloads">
+                    <li class="download-item"><a href="macmorpho-v1.tgz">First version</a></li>
+                    <li class="download-item"><a href="macmorpho-v2.tgz">Second version (first revision)</a></li>
+                </ul>
+            </div>
+        </div> <!-- main-->
+        
+        <div id="references">
+            <h2 class="references">References</h2>
+            <ol>
+                <li id="ref1" class="reference-item">Aluísio, S., Pelizzoni, J., Marchi, A.R., de Oliveira, L., Manenti, R., Marquiafável, V. 2003. <strong>An account of the
+    challenge of tagging a reference corpus for brazilian portuguese.</strong> In: Proceedings of the 6th International
+    Conference on Computational Processing of the Portuguese Language. PROPOR 2003 [<a href="http://link.springer.com/chapter/10.1007%2F3-540-45011-4_17">link</a>]</li>
+
+                <li id="ref2" class="reference-item">Fonseca, E.R., Rosa, J.L.G. 2013. <strong>Mac-morpho revisited: Towards robust part-of-speech.</strong> In: Proceedings of the 9th
+    Brazilian Symposium in Information and Human Language Technology – STIL [<a href="http://aclweb.org/anthology//W/W13/W13-4811.pdf">link</a>]</li>
+    
+                <li id="ref3" class="reference-item">Fonseca, E.R., Aluísio, Sandra Maria, Rosa, J.L.G. 2015. <strong>Evaluating word embeddings and a revised corpus for part-of-speech tagging in Portuguese.</strong> Journal of the Brazilian Computer Society. [<a href="http://www.journal-bcs.com/content/21/1/2">link</a>]</li>
+            </ol>
+        </div>
+    </body>
+</html>
